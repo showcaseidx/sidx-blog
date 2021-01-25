@@ -7,11 +7,11 @@ Don't spend more than a couple hours on this. If you don't finish, that's okay!
 It's meant as a place to start a discussion about some code and allow us to add an additional feature
 or two in a pair programming session.
 
-## Setup
-
 This is a standard rails app with a couple dependencies outside what comes with `rails new`.
 * rspec
 * factorybot
+
+## Setup
 
 To get the app up and running you'll need to:
 
