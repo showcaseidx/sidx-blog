@@ -7,10 +7,26 @@ RSpec.describe "Posts", type: :request do
       expect(response).to have_http_status(200)
     end
 
-    it "returns all posts" do
+    it "returns all posts when under 10 posts" do
       post = FactoryBot.create(:post)
       get posts_path
       expect(response.body).to include(post.to_json)
+    end
+
+    it "will return at most 10 posts" do
+      12.times do
+        FactoryBot.create :post
+      end
+      get posts_path
+      expect(JSON.parse(response.body).length).to eq(10)
+    end
+
+    it 'will return pages of size 10' do
+      12.times do
+        FactoryBot.create :post
+      end
+      get posts_path, params: {page: 2}
+      expect(JSON.parse(response.body).length).to eq(2)
     end
   end
 

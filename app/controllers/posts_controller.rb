@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    render json: Post.all
+    render json: Post.paginate(page: params[:page])
   end
 
   def create
