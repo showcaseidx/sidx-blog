@@ -41,6 +41,11 @@ RSpec.describe "Posts", type: :request do
       pending 'There are no current validations'
     end
 
+    it 'allows for tags to be added' do
+      post posts_path, params: { post: @post_attrs.merge(tag_list: 'test, code, thing') }, headers: @headers
+      obj = JSON.parse(response.body)
+      expect(obj['tag_list']).to eql(%w(test code thing))
+    end
 
   end
 

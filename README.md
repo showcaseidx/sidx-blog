@@ -27,11 +27,11 @@ To get the app up and running you'll need to:
 Please complete the following task.
 
 * Right now, there's no way to add posts.
-  * Your task is to create an API endpoint that accepts JSON for a post and returns the post and a status message.
+  - Your task is to create an API endpoint that accepts JSON for a post and returns the post and a status message.
 
 Please select one or two of the below features to add to the blog. You don't need to do all of them, but select one or 2 that you still have time for.
 
-* Currently, the index method returns all posts. Your task is to paginate the response and allow for a subset to be returned each time. Your response should include the current page and number of pages.
+== * Currently, the index method returns all posts. Your task is to paginate the response and allow for a subset to be returned each time. Your response should include the current page and number of pages.
 * The admin endpoints are insecure. Your task is to implement a simple authorization scheme via an authorization header that contains an api key.
-* The blog is without a tagging system. Implement a way to tag blog posts.
+== * The blog is without a tagging system. Implement a way to tag blog posts.
 
